@@ -1,4 +1,4 @@
-import { mockData } from "./mockData";
+import { mockData } from "./mockData.js";
 
 const canvas = document.getElementById("bubbleChart");
 const ctx = canvas.getContext("2d");
