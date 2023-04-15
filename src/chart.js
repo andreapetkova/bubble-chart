@@ -58,7 +58,7 @@ for (let i = 0; i <= 100; i += 20) {
   ctx.fillText(i.toString(), margin.left - 30, startingPointY + 5);
 }
 
-// bubbles data [X,Y,Value]
+// bubbles data in [X,Y,Value] format
 const mockData = [
   [10, 10, 5],
   [30, 5, 20],
