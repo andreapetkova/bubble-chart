@@ -1,3 +1,5 @@
+import { mockData } from "./mockData";
+
 const canvas = document.getElementById("bubbleChart");
 const ctx = canvas.getContext("2d");
 
@@ -61,18 +63,6 @@ for (let i = 0; i <= 100; i += 20) {
   ctx.stroke();
   ctx.fillText(i.toString(), margin.left - 30, startingPointY + 5);
 }
-
-// bubbles data in [X,Y,Value] format
-const mockData = [
-  [10, 10, 5],
-  [30, 5, 20],
-  [50, 70, 15],
-  [60, 60, 5],
-  [80, 40, 10],
-  [15, 50, 7],
-  [100, 85, 15],
-  [120, -50, 150], // this data will not be displayed because it's values are out of range
-];
 
 // create a clipping region that matches the chart area
 ctx.beginPath();
