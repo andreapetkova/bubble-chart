@@ -24,7 +24,7 @@ The chart also includes a set of X and Y axes, with tick marks and labels. The t
 
 ## Customization
 
-To customize the chart, you can adjust the values in the `mockData` array to change the location and size of the bubbles.
+To customize the chart, you can adjust the values in the `mockData` array in the `mockData.js` file to change the location and size of the bubbles.
 
 You can also adjust the tick mark spacing and labeling by changing the `for` loops that draw the axes. 
 The `xScale` and `yScale` functions can be adjusted to change the scaling of the chart axes.
