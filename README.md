@@ -18,13 +18,13 @@ There is no installation process for this project. Simply open the `index.html` 
 
 ## Usage
 
-The chart displays a set of bubbles with X and Y coordinates specified in the `mockData` array in the script. The size of each bubble is determined by a third value in the array.
+The chart displays a set of bubbles with X and Y coordinates specified in the `mockData` array in the `mockData.js` file. The size of each bubble is determined by a third value in the array.
 
 The chart also includes a set of X and Y axes, with tick marks and labels. The tick marks are spaced at intervals of 20, with the values labeled at each tick mark.
 
 ## Customization
 
-To customize the chart, you can adjust the values in the `mockData` array to change the location and size of the bubbles.
+To customize the chart, you can adjust the values in the `mockData` array in the `mockData.js` file to change the location and size of the bubbles.
 
 You can also adjust the tick mark spacing and labeling by changing the `for` loops that draw the axes. 
 The `xScale` and `yScale` functions can be adjusted to change the scaling of the chart axes.
