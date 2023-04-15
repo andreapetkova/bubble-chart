@@ -34,7 +34,7 @@ for (i = 0; i <= n; i++) {
   const r = rScale(Math.floor(Math.random() * 101));
 
   ctx.beginPath();
-  ctx.arc(x, y, r, 0, 2 * 2 * Math.PI);
+  ctx.arc(x, y, r, 0, 2 * Math.PI);
   ctx.fillStyle = styles.bubble.fillStyle;
   ctx.fill();
   ctx.strokeStyle = styles.bubble.strokeStyle;
