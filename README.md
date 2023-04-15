@@ -26,6 +26,23 @@ The chart also includes a set of X and Y axes, with tick marks and labels. The t
 
 To customize the chart, you can adjust the values in the `mockData` array to change the location and size of the bubbles.
 
+* If you want to generate a random number of circles with x,y and r in range [0,100] instead of using the mockData you could do the following => In `chart.js` remove everything from line 70 till the end of the code and replace it with a for loop like the one below (adjust `n` according to the number of circles you wish to generate)
+```
+for (i = 0; i <= n; i++) {
+  const x = xScale(Math.floor(Math.random() * 101));
+  const y = yScale(Math.floor(Math.random() * 101));
+  const r = rScale(Math.floor(Math.random() * 101));
+
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, 2 * 2 * Math.PI);
+  ctx.fillStyle = styles.bubble.fillStyle;
+  ctx.fill();
+  ctx.strokeStyle = styles.bubble.strokeStyle;
+  ctx.lineWidth = styles.bubble.lineWidth;
+  ctx.stroke();
+}
+```
+
 You can also adjust the tick mark spacing and labeling by changing the `for` loops that draw the axes.
 The `xScale` and `yScale` functions can be adjusted to change the scaling of the chart axes.
 
