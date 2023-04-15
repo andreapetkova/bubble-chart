@@ -1,6 +1,15 @@
 const canvas = document.getElementById("bubbleChart");
 const ctx = canvas.getContext("2d");
 
+// set canvas size
+canvas.width = 500;
+canvas.height = 500;
+
+// set the chart dimensions and margins
+const margin = { top: 30, right: 30, bottom: 50, left: 50 };
+const chartWidth = canvas.width - margin.left - margin.right;
+const chartHeight = canvas.height - margin.top - margin.bottom;
+
 //set styles for the chart
 const styles = {
   axis: {
@@ -13,11 +22,6 @@ const styles = {
     lineWidth: 2,
   },
 };
-
-// set the chart dimensions and margins
-const margin = { top: 30, right: 30, bottom: 50, left: 50 };
-const chartWidth = canvas.width - margin.left - margin.right;
-const chartHeight = canvas.height - margin.top - margin.bottom;
 
 // get pixel value for the x axis
 const xScale = (value) => {
