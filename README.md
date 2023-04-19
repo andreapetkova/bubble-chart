@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/82291897/232204020-30b6e6c3-5a7d-4b7a-a858-41241b8308e9.png)
 
-This is a simple bubble chart drawn on an HTML Canvas element using JavaScript. The chart displays bubbles at certain X and Y coordinates, with the size of the bubble determined by a third value.
+This is a simple bubble chart drawn on an HTML Canvas element using JavaScript. The chart displays bubbles at certain X and Y coordinates, with the area of the bubble determined by a third value.
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ There is no installation process for this project. Simply open the `index.html` 
 
 ## Usage
 
-The chart displays a set of bubbles with X and Y coordinates specified in the `mockData` array. The size of each bubble is determined by a third value in the array.
+The chart displays a set of bubbles with X and Y coordinates specified in the `mockData` array. The area of each bubble is determined by a third value in the array.
 
 The chart also includes a set of X and Y axes, with tick marks and labels. The tick marks are spaced at intervals of 20, with the values labeled at each tick mark.
 
@@ -26,7 +26,8 @@ The chart also includes a set of X and Y axes, with tick marks and labels. The t
 
 To customize the chart, you can adjust the values in the `mockData` array to change the location and size of the bubbles.
 
-* If you want to generate a random number of circles with x,y and r in range [0,100] instead of using the mockData you could do the following => In `chart.js` remove everything from line 70 till the end of the code and replace it with a for loop like the one below (adjust `n` according to the number of circles you wish to generate)
+- If you want to generate a random number of circles with x,y and area in range [0,100] instead of using the mockData you could do the following => In `chart.js` remove everything from line 70 till the end of the code and replace it with a for loop like the one below (adjust `n` according to the number of circles you wish to generate)
+
 ```
 for (i = 0; i <= n; i++) {
   const x = xScale(Math.floor(Math.random() * 101));
