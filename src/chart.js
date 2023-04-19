@@ -34,8 +34,9 @@ const yScale = (value) => {
 };
 
 // get pixel value for the radius
-const rScale = (value) => {
-  return value * (chartWidth / 100);
+const rScale = (area) => {
+  // we find our radius form the given area and then transform it into pixels
+  return Math.sqrt(area / Math.PI) * (chartWidth / 100);
 };
 
 // create the chart grid
@@ -67,15 +68,15 @@ ctx.beginPath();
 ctx.rect(margin.left, margin.top, chartWidth, chartHeight);
 ctx.clip();
 
-// bubbles data in [X,Y,Value] format
+// bubbles data in [X,Y,Area] format
 const mockData = [
-  [10, 10, 5],
-  [30, 5, 20],
-  [50, 70, 15],
-  [60, 60, 5],
+  [20, 10, 78],
+  [30, 0, 100],
+  [50, 70, 50],
+  [60, 60, 60],
   [80, 40, 10],
-  [15, 50, 7],
-  [100, 85, 15],
+  [25, 15, 90],
+  [100, 90, 65],
   [120, -50, 150], // this data will not be displayed because it's values are out of range
 ];
 
